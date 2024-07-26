@@ -1,0 +1,30 @@
+{
+  "name": "reversejuxtbot",
+  "version": "0.1.0",
+  "description": "A discord bot for reverse-searching for Juxt posts",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Milk-Cool/ReverseJuxtBot.git"
+  },
+  "keywords": [
+    "reverse",
+    "juxtaposition",
+    "image",
+    "search",
+    "pretendo"
+  ],
+  "author": "Milk_Cool",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Milk-Cool/ReverseJuxtBot/issues"
+  },
+  "homepage": "https://github.com/Milk-Cool/ReverseJuxtBot#readme",
+  "dependencies": {
+    "discord.js": "^14.15.3"
+  }
+}
