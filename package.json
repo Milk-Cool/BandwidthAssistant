@@ -1,6 +1,6 @@
 {
   "name": "reversejuxtbot",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A discord bot for reverse-searching for Juxt posts",
   "main": "index.js",
   "type": "module",
@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/Milk-Cool/ReverseJuxtBot#readme",
   "dependencies": {
-    "discord.js": "^14.15.3"
+    "discord.js": "^14.15.3",
+    "jsdom": "^24.1.1"
   }
 }
