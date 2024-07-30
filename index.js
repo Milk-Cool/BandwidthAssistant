@@ -20,7 +20,7 @@ const { CHANNEL } = process.env;
 const embedBrokenWR = (cup, track, pid, time) => new EmbedBuilder()
     .setColor("Red")
     .setTitle("sus record")
-    .setDescription(`PID: ${pid}
+    .setDescription(`PID: [${pid}](https://pretendolookup.milkcool.ru/user/${pid})
 Cup: ${cup}
 Track: ${track}
 Time: ${Math.floor(time / 60000).toString()}:${Math.floor((time / 1000) % 60).toString().padStart(2, "0")}.${Math.floor(time % 1000).toString().padStart(3, "0")}`)
@@ -60,6 +60,10 @@ client.on("ready", () => {
 const ids = process.env.IDS.split(",");
 
 client.on("messageCreate", async msg => {
+    const channel = await client.channels.fetch(CHANNEL);
+                    if (channel?.isTextBased()) {
+                        await channel.send({ "embeds": [embedBrokenWR("test", "test", 1234, 1111111)] });
+                    }
     try {
         if(!ids.includes(msg.guildId.toString())) return;
         const att = msg.attachments.size ? msg.attachments.at(0) : null;
